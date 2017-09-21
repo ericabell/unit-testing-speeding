@@ -15,7 +15,10 @@ public class SpeedingTest {
 
     @Test
     public void caughtSpeeding() throws Exception {
-        assertTrue(Speeding.caughtSpeeding(60, true)==-2);
+        assertTrue(Speeding.caughtSpeeding(55, false)==0);
+        assertTrue(Speeding.caughtSpeeding(65, false)==1);
+        assertTrue(Speeding.caughtSpeeding(81, false)==2);
+        assertTrue(Speeding.caughtSpeeding(90, true)==0);
     }
 
 }
